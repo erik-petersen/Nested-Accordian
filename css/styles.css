@@ -1,0 +1,24 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.outer-button {
+  border-style: none;
+  background: #fff;
+}
+
+.hide {
+  display: none;
+}
+
+.hide-down-arrow {
+  display: none;
+}
+
+.show-down-arrow {
+  display: inline;
+}
+
+.show {
+  display: block;
+}
