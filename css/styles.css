@@ -6,8 +6,10 @@ body {
 .outer-heading {
   border-style: none;
   background: #fff;
-  font-size: 2.25em;
+  font-size: 2.50em;
   font-weight: 300;
+  padding: 1em 0 .6em .5em;
+  margin-bottom: .6em;
   border-bottom: .025em solid #ddd;
 }
 
@@ -15,6 +17,18 @@ body {
   display: none;
 }
 
+.hide p {
+  font-size: 1.25em;
+  font-weight: 300;
+  color: #888;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.fa-arrow-right {
+    font-weight: 200;
+    color: #ddd;
+}
 .hide-right-arrow {
   display: none;
 }
@@ -23,7 +37,8 @@ body {
   display: inline;
 }
 
-.arrow-container:hover > span {
+.arrow-container:hover span {
+  color: #47a3da;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
@@ -38,4 +53,24 @@ body {
 
 .show {
   display: block;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4em;
+  padding: 1em 0 0 .5em;
+  margin-bottom: 1em;
+}
+
+.fa-arrow-circle-o-right {
+  font-weight: 200;
+  color: #ddd;
+}
+
+h4:hover span {
+  color: #47a3da;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
 }
