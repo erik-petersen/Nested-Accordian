@@ -7,13 +7,13 @@
 // });
 
 // but this is better!!! Note that you can only apply an eventListener to an array ELEMENT...not an array
-var btn = document.getElementsByClassName( "outer-button" );
-var arrow = document.getElementsByClassName( "hide-down-arrow" );
+var btn = document.getElementsByClassName( "outer-heading" );
 
 for( var index = 0; index < btn.length; index++ ) {
   btn[index].addEventListener( "click", function() {
     this.nextElementSibling.classList.toggle( "show" );
     this.lastElementChild.classList.toggle( "show-down-arrow" );
+    this.firstElementChild.classList.toggle( "hide-right-arrow" );
   });
 }
 
