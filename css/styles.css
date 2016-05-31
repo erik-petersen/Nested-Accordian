@@ -1,7 +1,77 @@
+/* Erik Petersen Week 2 Weekend Project: Nested-Accordian */
+
+/*******************************************************************
+BODY SECTION
+*******************************************************************/
+
 body {
   font-family: "Lato", sans-serif;
   color: #47a3da;
 }
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/*******************************************************************
+HEADER SECTION
+*******************************************************************/
+
+header {
+  margin:  2.5em auto 0;
+  padding-bottom: 7em;
+}
+
+h1 {
+  font-size: 2.125em;
+  float: left;
+}
+
+nav {
+  float: right;
+  color: #47a3da;
+}
+
+nav li {
+  display: inline-block;
+  position: relative;
+  color: #47a3da;
+}
+
+nav a {
+  box-sizing: border-box;
+  width: 2.5em;
+  height: 2.5em;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 400;
+  background: #fff;
+  border: .3em solid #47a3da;
+  color: #47a3da;
+  border-radius: 50%;
+  padding: .3em .5em;
+}
+
+nav a:hover {
+  background: #47a3da;
+}
+
+.tear-drop {
+  padding: 0 .12em;
+}
+
+nav span:hover {
+  color: #fff;
+}
+
+nav span {
+  color: #47a3da;
+}
+
+/*******************************************************************
+MAIN SECTION
+*******************************************************************/
 
 .outer-heading {
   border-style: none;
@@ -19,18 +89,38 @@ body {
 
 .hide p {
   font-size: 1.25em;
-  font-weight: 300;
+  font-weight: 400;
   color: #888;
   line-height: 1.5em;
   margin-bottom: 1em;
 }
 
 .fa-arrow-right {
+    font-size: .8em;
     font-weight: 200;
     color: #ddd;
+    margin-right: .1em;
 }
+
+.nav-right-arrow {
+  box-sizing: border-box;
+  text-align: center;
+  color: #47a3da;
+  font-size: .8em;
+  font-weight: 400;
+  padding-left: .015em;
+}
+
 .hide-right-arrow {
   display: none;
+}
+
+.arrow-one {
+  padding-left: .1em;
+}
+
+.inner-ul {
+  padding-left: 2em; d
 }
 
 .show-right-arrow {
@@ -73,4 +163,9 @@ h4:hover span {
   color: #47a3da;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
+}
+
+.inner-ul span {
+  font-size: 1.2em;
+  padding-right: .4em;
 }
