@@ -13,16 +13,16 @@ var btn = document.getElementsByClassName( "outer-heading" );
 
 for( var index = 0; index < btn.length; index++ ) {
   btn[index].addEventListener( "click", function() {
-    var selected = this.indexOf()
-    this.nextElementSibling.focus();
+    // var selected = this.indexOf()
+    // this.nextElementSibling.focus();
     this.nextElementSibling.classList.toggle( "show" );
     this.lastElementChild.classList.toggle( "show-down-arrow" );
     this.firstElementChild.classList.toggle( "hide-right-arrow" );
     //this next part doesn't work
     //btn[this+1].nextElementSibling.classList.setAttribute("class","hide");
-    if( this.indexOf() ) {
-      btn[1].nextElementSibling.blur();
-    }
+    // if( this.indexOf() ) {
+    //   btn[1].nextElementSibling.blur();
+    // }
 
     //take current index position and put it at the end of a new array
     //then iterate through array - 1 and remove "show" class
