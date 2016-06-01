@@ -81,6 +81,7 @@ MAIN SECTION
   padding: 1em 0 .6em .5em;
   margin-bottom: .6em;
   border-bottom: .025em solid #ddd;
+  cursor: pointer;
 }
 
 .hide {
