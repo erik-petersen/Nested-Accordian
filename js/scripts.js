@@ -3,6 +3,7 @@
 var $btn = $( ".outer-ul" );
 var $innerBtn = $( ".inner-ul" );
 
+// for outer-ul click event
 $btn.on("click", ".outer-heading", function() {
   console.log("Hello");
   if( $(this).next().is( ":hidden" ) ) {
@@ -10,28 +11,18 @@ $btn.on("click", ".outer-heading", function() {
     $(this).children( ".hide-down-arrow" ).show();
     $(this).children( ".fa-arrow-right" ).hide();
 
-    $innerBtn.on("click", "h4", function() {
-      console.log( "yaaayyy" );
-      if( $(this).next().is( ":hidden" ) ) {
-        $(this).next().slideDown( 800, function() {} );
+/*
+    //if any of the other siblings that are not this are visible, hide them...on the right track but not working
+    for( var index = 0; index < $btn.length; index++ ) {
+      if( $btn.next().index() !== $(this).next().index() || $btn.next().index().is(":visible")) {
+        console.log("Success!!!!!!!!!!");
+        console.log($(this).index());
+        $btn.next().index().hide();
       }
-
-      else {
-        $(this).next().slideUp( 800, function() {});
-      }
-    });
-
-    // if any of the other siblings that are not this are visible, hide them
-  //   for( var index = 0; index < $btn.length; index++ ) {
-  //     if( $btn.next().index() !== $(this).next().index() || $btn.next().index().is(":visible")) {
-  //       console.log("Success!!!!!!!!!!");
-  //       console.log($(this).index());
-  //       $btn.next().index().hide();
-  //     }
-  //   }
+    }
+*/
 
   } // end if
-
 
     else {
       $(this).next().slideUp( 800, function() {});
@@ -41,58 +32,18 @@ $btn.on("click", ".outer-heading", function() {
 }); // end click()
 
 
+// for inner-ul click event
+$innerBtn.on("click", "h4", function() {
+  console.log( "yaaayyy" );
+  if( $(this).next().is( ":hidden" ) ) {
+    $(this).next().slideDown( 800, function() {} );
+    $(this).children( ".fa-arrow-circle-o-down" ).show();
+    $(this).children( ".fa-arrow-circle-o-right" ).hide();
+  }
 
-
-
-// when button is clicked, if it is closed, I want it to open. If it is open, I want it to close.
-// if any other boxes are open, I want them to close.
-
-
-// $( "#book" ).slideDown( "slow", function() {
-//     // Animation complete.
-//   });
-// for( var index = 0; index < btn.length; index++ ) {
-//   $btn[index].click( function() {
-//     console.log("Button clicked");
-//     $(this).next().show();
-//   });
-// }
-
-
-
-// but this is better!!! Note that you can only apply an eventListener to an array ELEMENT...not an array
-// var btn = document.getElementsByClassName( "outer-heading" );
-// for( var index = 0; index < btn.length; index++ ) {
-//   btn[index].addEventListener( "click", function() {
-//     this.nextElementSibling.classList.toggle( "show" );
-//     this.lastElementChild.classList.toggle( "show-down-arrow" );
-//     this.firstElementChild.classList.toggle( "hide-right-arrow" );
-//   });
-// } // end workable vanilla js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  this works!!!!!
-// var btn = document.getElementsByClassName( "outer-button" );
-// btn[0].addEventListener( "click", function () {
-//   for( var index = 0; index < btn.length; index++ ) {
-//     btn[index].nextElementSibling.classList.toggle("show");
-//   }
-// });
+  else {
+    $(this).next().slideUp( 800, function() {});
+    $(this).children( ".fa-arrow-circle-o-down" ).hide();
+    $(this).children( ".fa-arrow-circle-o-right" ).show();
+  }
+});

@@ -1,4 +1,4 @@
-/* Erik Petersen Week 2 Weekend Project: Nested-Accordian */
+/* Erik Petersen Week 3 Day 2: The Revenge of Nested-Accordian */
 
 /*******************************************************************
 BODY SECTION
@@ -153,6 +153,7 @@ h4 {
   letter-spacing: .4em;
   padding: 1em 0 0 .5em;
   margin-bottom: 1em;
+  cursor: pointer;
 }
 
 .fa-arrow-circle-o-right {
