@@ -12,7 +12,13 @@ $btn.on("click", ".outer-heading", function() {
 
     $innerBtn.on("click", "h4", function() {
       console.log( "yaaayyy" );
-      $(this).next().slideDown( 800, function() {} );
+      if( $(this).next().is( ":hidden" ) ) {
+        $(this).next().slideDown( 800, function() {} );
+      }
+
+      else {
+        $(this).next().slideUp( 800, function() {});
+      }
     });
 
     // if any of the other siblings that are not this are visible, hide them
